@@ -9,7 +9,7 @@ e.pack()
 
 def function():
     a=['red','green','blue','yellow','black','white','orange','pink']
-    b=random.randint(0,8)
+    b=random.randint(0,7)
     return a[b]
 
 def myClick():
