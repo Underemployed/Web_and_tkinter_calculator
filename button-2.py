@@ -5,7 +5,7 @@ from click import command
 root = Tk()
 
 e=Entry(root,width=50)
-e.pack()
+
 
 def randomcolorgenerator():
     a=['red','green','blue','yellow','black','white','orange','pink']
