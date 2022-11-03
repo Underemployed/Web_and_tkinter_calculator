@@ -13,8 +13,8 @@ def calculate(s):
     def update(op, v):
         if op == "+": stack.append(v)
         if op == "-": stack.append(-v)
-        if op == "*": stack.append(stack.pop() * v)           #for BC II and BC III
-        if op == "/": stack.append(int(stack.pop() / v))      #for BC II and BC III
+        if op == "*": stack.append(stack.pop() * v)          
+        if op == "/": stack.append(int(stack.pop() / v))      
     
     it, num, stack, sign = 0, 0, [], "+"
         
@@ -24,15 +24,15 @@ def calculate(s):
         elif s[it] in "+-*/":
             update(sign, num)
             num, sign = 0, s[it]
-        elif s[it] == "(":                                        # For BC I and BC III
+        elif s[it] == "(":                                      
             num, j = calculate(s[it + 1:])
             it = it + j
-        elif s[it] == ")":                                        # For BC I and BC III
+        elif s[it] == ")":                                        
             update(sign, num)
             return sum(stack), it + 1
         it += 1
     update(sign, num)
-    return str(sum(stack))
+    return str(sum(stack))# i used to do leetcode javascript my mainwas python so got frustrated and did this in pyton
 def button_click(a):
     current=e.get()
     if a=="=":
@@ -45,7 +45,7 @@ def button_click(a):
         current=""
     if a=="del":
         current=current[:len(current)-1]
-    if str(a) in "1234567890+-":
+    if str(a) in "1234567890+-*()/":
         current=e.get()+str(a)
     e.delete(0,END)
     e.insert(0,str(current))
@@ -63,10 +63,16 @@ button_8=Button(root,text="8",padx=40,pady=20,command=lambda:button_click(8))
 button_9=Button(root,text="9",padx=40,pady=20,command=lambda:button_click(9))
 button_0=Button(root,text="0",padx=40,pady=20,command=lambda:button_click(0))
 button_add=Button(root,text="+",padx=40,pady=20,command=lambda:button_click('+'))
-button_equal=Button(root,text="=",padx=40,pady=20,command=lambda:button_click('='))
+button_equal=Button(root,text="=",padx=120,pady=20,command=lambda:button_click('='))
 button_clear=Button(root,text="AC",padx=35,pady=20,command=lambda:button_click("clear"))
 button_del=Button(root,text="del",padx=32,pady=20,command=lambda:button_click("del"))
 button_minus=Button(root,text="-",padx=40,pady=20,command=lambda:button_click("-"))
+button_x=Button(root,text="x",padx=40,pady=20,command=lambda:button_click("*"))
+button_div=Button(root,text="/",padx=40,pady=20,command=lambda:button_click("/"))
+button_brc1=Button(root,text="(",padx=40,pady=20,command=lambda:button_click("("))
+button_brc2=Button(root,text=")",padx=40,pady=20,command=lambda:button_click(")"))
+
+
 # put button on the screen
 
 button_1.grid(row=1,column=0)
@@ -85,10 +91,15 @@ button_0.grid(row=4,column=0)
 button_clear.grid(row=4,column=1)
 button_del.grid(row=4,column=2)
 
-button_add.grid(row=5,column=0)
-button_equal.grid(row=5,column=2)
-button_minus.grid(row=5,column=1)
+button_add.grid(row=6,column=0)
+button_brc2.grid(row=6,column=2)
+button_minus.grid(row=6,column=1)
+
+button_div.grid(row=5,column=0)
+button_x.grid(row=5,column=1)
+button_brc1.grid(row=5,column=2)
 
 
+button_equal.grid(row=7,column=0,columnspan=3)
 
 root.mainloop()
