@@ -11,7 +11,7 @@ def randomColor():
     b=random.randint(0,len(list)-1)
     d=list[b],list[b-1],list[b-2]
     return d[random.randint(0,2)]
-    
+
 
 def onClick():
     b=randomColor()
