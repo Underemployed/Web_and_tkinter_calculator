@@ -8,4 +8,4 @@ thank you
 
 Calculator
 
-<img src="https://github.com/Underemployed/learning-Python-Tkinter/blob/main/screenshots/Screenshot%20from%202022-12-27%2010-18-29.png" width=300>
+<img src="https://github.com/Underemployed/learning-Python-Tkinter/blob/main/screenshots/Screenshot%20from%202022-12-27%2010-18-29.png" width=200>
