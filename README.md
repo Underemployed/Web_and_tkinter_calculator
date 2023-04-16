@@ -2,7 +2,7 @@
 #A Web and Python Tkinter based simple calculator using solution for a problem I found during a leetcode venture
 
 
-Web Calculator  [Live Demo](https://underemployed.github.io/Web_and_tkinter_calculator/)  
+[Web Calculator Live Demo](https://underemployed.github.io/Web_and_tkinter_calculator/)  
 
 Python tkinter Calculator
 
