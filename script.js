@@ -27,7 +27,16 @@ function toggleMode() {
       function addToDisplay(character) {
         display.value += character;
       }
-
+/*
+optional code for rounding till 11 digits
+function calculateResult() {
+  const expression = display.value;
+  if (checkInput(expression)) {
+    const result = calculate(expression);
+    display.value = Math.round(result*10**11  ) /10**11; // rounds to 6 decimal places
+  }
+}
+*/
       function calculateResult() {
         const expression = display.value;
         if (checkInput(expression)) {
