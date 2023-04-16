@@ -52,9 +52,10 @@ var stack = [];
 var num = 0;
 var op = "+";
 for (var i = 0; i < s.length; i++) {
-var c = s.charAt(i);
-if (c >= "0" && c <= "9") {
-num = num * 10 + parseInt(c);
+  var c = s.charAt(i);
+
+  if (c >= "0" && c <= "9") {
+    num = num * 10 + parseInt(c);
 } else if (c == "(") {
 stack.push(op);
 op = "+";
@@ -75,7 +76,14 @@ result += stack[i];
 }
 return result;
 
-}
+} 
+
+display.addEventListener("input", function() {
+
+const value = display.value;
+console.log(value);
+});
+
 document.getElementById("display").addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
       calculateResult();
@@ -85,4 +93,23 @@ display.addEventListener("input", function() {
 
 const value = display.value;
 console.log(value);
+
+
 });
+function toggleMode() {
+  const body = document.querySelector("body");
+  const switchBtn = document.querySelector(".switch input[type='checkbox']");
+
+  if (switchBtn.checked) {
+    body.classList.add("dark-mode");
+    calculator.classList.add("dark-mode");
+    body.classList.remove("light-mode");
+    calculator.classList.add("dark-mode");
+    calculator.classList.remove("dark-mode");
+  } else {
+    body.classList.add("light-mode");
+    body.classList.remove("dark-mode");
+    calculator.classList.add("light-mode");
+    calculator.classList.remove("dark-mode");
+  }
+}
