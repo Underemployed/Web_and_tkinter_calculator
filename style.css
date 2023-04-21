@@ -12,7 +12,7 @@
     body.dark-mode button {
       box-shadow: none;
     }
-    
+
 
   body.dark-mode #calculator {
     background-color: #333;
@@ -41,7 +41,7 @@
     text-align: right;
     border: none;
     background-color: #fff;
-    box-shadow: 0px 3px 10px #333;
+    box-shadow: 0px 3px 10px #cabebee3;
     border-radius: 10px;
     color: #555;
     }
@@ -114,7 +114,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      transition: transform 0.5s ease;
     }
     
     .slider:after {
@@ -127,13 +127,15 @@
       background-repeat: no-repeat;
       background-size: contain;
       border-radius: 50%;
-      transition: transform 0.3s ease;
+      transition: transform 0.3 ease;
     }
     
     
     input:checked + .slider {
       background-color: #5921f3;
       background-image: url('screenshots/sun.png');
+
+
 
 
     }
@@ -144,7 +146,9 @@
 
 
     }
-    
+    body.dark-mode input {
+      box-shadow: none;
+    }
     input:checked + .slider:after {
       transform: translateX(-26px);
       background-image: url();
